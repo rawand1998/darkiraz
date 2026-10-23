@@ -1,13 +1,11 @@
 import React from "react";
-import { Card, Col, Row, Container, Button } from "react-bootstrap";
+import { Card, Col, Row, Button } from "react-bootstrap";
 import  { useState, useEffect } from "react";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import { FaHandHoldingHeart } from "react-icons/fa";
 import { FaChildren } from "react-icons/fa6";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileExport } from "@fortawesome/free-solid-svg-icons";
-import { LuMenu } from "react-icons/lu";
+
 import * as XLSX from "xlsx";
 const StaticsCard = () => {
   const [data, setData] = useState([]);
@@ -66,41 +64,7 @@ const StaticsCard = () => {
       alert("حدث خطأ أثناء تصدير البيانات.");
     }
   };
-  // const handleExportToExcel = async () => {
-  //   try {
-  //     // 1. جلب البيانات من مجموعة orphones في فايرستور
-  //     const querySnapshot = await getDocs(collection(db, "orphones"));
-  //     const orphansList = [];
-
-  //     querySnapshot.forEach((doc) => {
-  //       // جمع معرف المستند مع البيانات الموجودة بداخله (مثل familyDetails وغيرها)
-  //       orphansList.push({
-  //         id: doc.id,
-  //         ...doc.data(),
-  //         // إذا كانت البيانات متداخلة داخل familyDetails يمكنك تفكيكها أو وضعها كما هي
-  //         ...(doc.data().familyDetails || {})
-  //       });
-  //     });
-
-  //     if (orphansList.length === 0) {
-  //       alert("لا توجد بيانات لتصديرها!");
-  //       return;
-  //     }
-
-  //     // 2. إنشاء ورقة عمل (Worksheet) من البيانات
-  //     const worksheet = XLSX.utils.json_to_sheet(orphansList);
-
-  //     // 3. إنشاء ملف Excel جديد (Workbook)
-  //     const workbook = XLSX.utils.book_new();
-  //     XLSX.utils.book_append_sheet(workbook, worksheet, "OrphansData");
-
-  //     // 4. تحميل الملف مباشرة على الجهاز باسم orphones_data.xlsx
-  //     XLSX.writeFile(workbook, "orphones_data.xlsx");
-
-  //   } catch (error) {
-  //     console.error("Error exporting data: ", error);
-  //   }
-  // };
+ 
    useEffect(() => {
       const fetchData = async () => {
         try {
