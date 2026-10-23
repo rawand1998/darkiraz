@@ -1,6 +1,4 @@
 import { Navigate ,useLocation } from "react-router-dom";
-import React from 'react'
-// import {useAuth} from './AuthContext'
 import { useAuth } from './AuthProvider';
 
 function RequiredAuth({children}) {

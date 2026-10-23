@@ -1,4 +1,3 @@
-import React from "react";
 import { Card, Col, Row, Button } from "react-bootstrap";
 import  { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";

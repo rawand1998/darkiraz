@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
+import { useState } from "react";
+import { Nav } from "react-bootstrap";
 import { IoIosAddCircle } from "react-icons/io";
-import { FaChildren } from "react-icons/fa6";
-import { FaUser, FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import navbarlogo from "../../navbarlogo.png";
 import ProfileCard from "../Cards/ProfileCard";
 import { FaUsers, FaUserTie } from "react-icons/fa";
@@ -244,16 +243,9 @@ function Navbar() {
           className="sidebar-menu d-flex flex-column align-items-center py-4 px-3 w-100 h-100"
           dir="rtl"
         >
-          {/* الشعار الدائري واسم الدار */}
+         
           <div className="text-center mb-4">
-            {/* <div className="brand-logo-circle mb-2 mx-auto d-flex align-items-center justify-content-center rounded-circle shadow-sm">
-              <span className="fw-bold text-dark logo-text">
-                Dar Kiraz Arslan
-              </span>
-            </div>
-            <h6 className="fw-bold text-dark m-0 brand-title-ar">
-              دار كراز أرسلان
-            </h6> */}
+        
             <img src={navbarlogo} style={{width:"150px",height:"150px"}}/>
           </div>
 

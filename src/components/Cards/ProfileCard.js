@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
-import { FaUser, FaKey } from "react-icons/fa";
+import  { useState, useEffect } from "react";
+import { FaKey } from "react-icons/fa";
 import { IoIosLogOut } from "react-icons/io";
 import { useAuth } from "../../context/AuthProvider";
-import { signOut, sendPasswordResetEmail } from "firebase/auth";
+import { signOut } from "firebase/auth";
 import { doc, updateDoc } from "firebase/firestore";
 import auth from "../../firebase";
 import { useNavigate } from "react-router-dom";

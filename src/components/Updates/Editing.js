@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Modal, Form, Button, Row, Col,Card } from "react-bootstrap";
 import { db } from "../../firebase"; // عدلي مسار الـ firebase حسب مشروعك
 import { doc, updateDoc } from "firebase/firestore";
@@ -118,14 +118,10 @@ function Editing({ show, handleClose, orphanData, onUpdateSuccess }) {
       </Modal.Header>
        <Form onSubmit={handleUpdate}>
          <Modal.Body style={{ maxHeight: "75vh", overflowY: "auto" }}>
-        {/* أزرار الحفظ والإلغاء */}
         <div className="text-end mt-4">
-          {/* <Button variant="secondary" className="me-2" onClick={handleClose}>
-            إلغاء
-          </Button> */}
+      
          
         </div>
-        {/* </Form> */} 
         <Card className="p-4 shadow-sm mb-4">
           <h4 className="fw-bold">بيانات اليتيم</h4>
           {/* <Form onSubmit={handleUpdate}> */}

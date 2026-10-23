@@ -1,7 +1,6 @@
-import React from 'react'
 import './Header.css'
 import { Navbar,Nav,Container } from 'react-bootstrap'
-import { FaHome,FaFileAlt,FaUsers,FaBell,FaSearch } from 'react-icons/fa'
+import { FaHome,FaFileAlt,FaUsers } from 'react-icons/fa'
 import ProfileCard from '../Cards/ProfileCard'
 function Header() {
   return (

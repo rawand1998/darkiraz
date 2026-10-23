@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import{ useState, useEffect } from "react";
 import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../../firebase";
 import Table from "react-bootstrap/Table";
@@ -8,7 +8,6 @@ import { Col, Row, Button, InputGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import StaticsCard from "../StasticsCard/StaticsCard";
 import { FaEye } from "react-icons/fa";
-import ProfileCard from "../Cards/ProfileCard";
 import Editing from "../Updates/Editing";
 const Data = () => {
   const [data, setData] = useState([]); //تتغير عن البحث
