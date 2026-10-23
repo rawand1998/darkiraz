@@ -73,7 +73,7 @@ const handleOpenEdit = (item) => {
    
     {!data ? (
         <div>Loading...</div>
-      ) : (
+      ) :data.length >0 ? (
          <div className="container" dir="rtl">
      
     
@@ -256,6 +256,8 @@ const handleOpenEdit = (item) => {
   }}/>
     </div>
     
+      ):(
+        <div>لا توجد بيانات حاليا</div>
       )
     }
    </>
