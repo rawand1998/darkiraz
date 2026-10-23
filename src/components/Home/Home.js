@@ -1,6 +1,4 @@
-import { useAuth } from "../../context/AuthProvider";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase";
 import Form from "react-bootstrap/Form";

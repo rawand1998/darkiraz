@@ -67,6 +67,7 @@ console.log("currentUser",currentUser)
       setError("حدث خطأ في الاتصال بقاعدة البيانات.");
     } finally {
       setLoading(false);
+      console.log(loading)
     }
   };
 

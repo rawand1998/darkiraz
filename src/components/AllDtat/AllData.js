@@ -22,11 +22,9 @@ const Data = () => {
 
         if (docSnap.exists()) {
           setData({ id: docSnap.id, ...docSnap.data() });
-          console.log("Document raaand:", docSnap.data());
         }
 
        
-        console.log("Data fetched successfully:", data);
       } catch (error) {
         console.error("Error fetching data: ", error);
       }

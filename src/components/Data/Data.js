@@ -1,5 +1,5 @@
 import{ useState, useEffect } from "react";
-import { collection, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../firebase";
 import Table from "react-bootstrap/Table";
 import { CiEdit } from "react-icons/ci";
