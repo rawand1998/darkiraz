@@ -18,9 +18,6 @@ import {
 } from "react-icons/fa";
 import "./Home.module.css";
 export default function Home() {
-  const { currentUser } = useAuth();
-  const nagigate = useNavigate();
-  const [error, setError] = useState("");
   //orphone infromation
 
   const [orphonename, setOrphoneName] = useState("");

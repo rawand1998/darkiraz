@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import { useState } from "react";
 import {
   Form,
   Button,
@@ -23,7 +23,6 @@ const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-  const [name, setName] = useState("");
   const navigate = useNavigate();
   const { login ,currentUser} = useAuth();
 console.log("currentUser",currentUser)
@@ -185,6 +184,7 @@ console.log("currentUser",currentUser)
 
                         // objectFit: "cover",
                       }}
+                      alt="none"
                     />
                   </div>
                   <h2

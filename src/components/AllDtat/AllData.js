@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import {  Button } from "react-bootstrap";
 import {
  
@@ -8,7 +8,6 @@ import {
 } from "firebase/firestore";
 import { useParams,useNavigate } from "react-router-dom";
 import { db } from "../../firebase";
-import ProfileCard from "../Cards/ProfileCard.js";
 const Data = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();

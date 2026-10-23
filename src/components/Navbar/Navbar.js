@@ -246,7 +246,7 @@ function Navbar() {
          
           <div className="text-center mb-4">
         
-            <img src={navbarlogo} style={{width:"150px",height:"150px"}}/>
+            <img src={navbarlogo} style={{width:"150px",height:"150px"}} alt="unfound"/>
           </div>
 
           {/* الروابط والأيقونات */}

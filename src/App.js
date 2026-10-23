@@ -1,8 +1,7 @@
 import "./App.css";
 import Home from "./components/Home/Home";
 import Login from "./components/Auth/Login";
-import Register from "./components/Auth/Register";
-import ForgetPassword from "./components/Auth/ForgetPassword";
+
 import Data from "./components/Data/Data";
 //import Contacts from './components/Contacts/Contacts'
 import { BrowserRouter, Routes, Route,useLocation } from "react-router-dom";

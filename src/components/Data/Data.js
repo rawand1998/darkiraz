@@ -28,15 +28,15 @@ const handleOpenEdit = (item) => {
   setShowEditModal(true); }
    // إظهار الـ Pop-up
 
-  const removeData = async (id) => {
-    const dataRef = doc(db, "orphones", id);
-    try {
-      await deleteDoc(dataRef);
-      setData((prevData) => prevData.filter((item) => item.id !== id));
-    } catch (error) {
-      console.error("Error removing data: ", error);
-    }
-  };
+  // const removeData = async (id) => {
+  //   const dataRef = doc(db, "orphones", id);
+  //   try {
+  //     await deleteDoc(dataRef);
+  //     setData((prevData) => prevData.filter((item) => item.id !== id));
+  //   } catch (error) {
+  //     console.error("Error removing data: ", error);
+  //   }
+  // };
   const handleSearch = async () => {
     try {
       // setData((prevData) =>
