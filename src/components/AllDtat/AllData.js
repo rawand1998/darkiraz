@@ -11,6 +11,7 @@ import { db } from "../../firebase";
 const Data = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
+  console.log(id,"all data page")
   const navigate = useNavigate();
   console.log("ID from URL:", id, data); // تحقق من الـ id القادم من الرابط
   useEffect(() => {

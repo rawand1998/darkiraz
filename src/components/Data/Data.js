@@ -26,27 +26,10 @@ const [selectedOrphan, setSelectedOrphan] = useState(null);
 const handleOpenEdit = (item) => {
   setSelectedOrphan(item); // تخزين بيانات اليتيم الحالي
   setShowEditModal(true); }
-   // إظهار الـ Pop-up
 
-  // const removeData = async (id) => {
-  //   const dataRef = doc(db, "orphones", id);
-  //   try {
-  //     await deleteDoc(dataRef);
-  //     setData((prevData) => prevData.filter((item) => item.id !== id));
-  //   } catch (error) {
-  //     console.error("Error removing data: ", error);
-  //   }
-  // };
   const handleSearch = async () => {
     try {
-      // setData((prevData) =>
-      //   prevData.filter((item) =>
-      //   // item?.orphonename && item?.orphonename.toLowerCase().includes(searchName.toLowerCase()),
-      //     item.orphone.orphonename.toLowerCase().includes(searchName.toLowerCase()),
-      //     // console.log(item.orphone.orphonename.toLowerCase().includes(searchName.toLowerCase()))
-      //   ),
-      // );
-      // setSearchName("");
+     
       const filteredData = originalData.filter(
         (item) =>
           item?.orphone.orphonename &&
@@ -70,7 +53,9 @@ const handleOpenEdit = (item) => {
         }));
         setData(dataList);
         setOriginalData(dataList);
-        console.log(dataList);
+        console.log(dataList.map((item)=>{
+          console.log(item.id,"data page")
+        }));
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
@@ -84,7 +69,12 @@ const handleOpenEdit = (item) => {
   }
 
   return (
-    <div className="container" dir="rtl">
+    <>
+   
+    {!data ? (
+        <div>Loading...</div>
+      ) : (
+         <div className="container" dir="rtl">
      
     
       <StaticsCard />
@@ -265,7 +255,12 @@ const handleOpenEdit = (item) => {
     // fetchData(); 
   }}/>
     </div>
-   
+    
+      )
+    }
+   </>
+    
   );
+  
 };
 export default Data;

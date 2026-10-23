@@ -1,35 +1,35 @@
 
-    import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom'; // 1. استيراد useParams لالتقاط الـ id من الرابط
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { db } from "../../firebase";
-import { collection, getDocs, deleteDoc, doc,getDoc } from "firebase/firestore";
+    // import React, { useState, useEffect } from 'react';
+// import { useParams } from 'react-router-dom'; // 1. استيراد useParams لالتقاط الـ id من الرابط
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { db } from "../../firebase";
+// import { collection, getDocs, deleteDoc, doc,getDoc } from "firebase/firestore";
 // استيراد قاعدة بيانات فايربيس (تأكد من صحة مسار الاستيراد لديك)
 // import { db } from '../../firebase'; 
 // import { doc, getDoc } from 'firebase/firestore';
 
-function AllData() {
+// function AllData() {
   // 2. التقاط الـ id من الـ URL (الرابط)
-  const { id } = useParams();
+  // const { id } = useParams();
 
   // تخزين بيانات اليتيم الواحد كـ كائن (Object) وليس مصفوفة
-  const [orphanData, setOrphanData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [orphanData, setOrphanData] = useState(null);
+  // const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchOrphanById = async () => {
-      try {
+  // useEffect(() => {
+  //   const fetchOrphanById = async () => {
+  //     try {
         
-          // 3. الطريقة الصحيحة لجلب مستند واحد من Firestore باستخدام الـ id:
-          const docRef = doc(db, "orphones", id); // استبدل "orphans" باسم الـ collection لديك
-          console.log("Document data:", docRef);
-          const docSnap = await getDoc(docRef);
-          if (docSnap.exists()) {
-            setOrphanData(docSnap.data());
-            console.log("hiiii",docSnap.data())
-          } else {
-            console.log("No such document!");
-          }
+          // // 3. الطريقة الصحيحة لجلب مستند واحد من Firestore باستخدام الـ id:
+          // const docRef = doc(db, "orphones", id); // استبدل "orphans" باسم الـ collection لديك
+          // console.log("Document data:", docRef);
+          // const docSnap = await getDoc(docRef);
+          // if (docSnap.exists()) {
+          //   setOrphanData(docSnap.data());
+          //   console.log("hiiii",docSnap.data())
+          // } else {
+          //   console.log("No such document!");
+          // }
         
 
         // محاكاة بيانات تجريبية بناءً على الـ id القادم من الرابط
@@ -48,34 +48,34 @@ function AllData() {
         //   altPhone: "123456789"
         // });
 
-        setLoading(false);
-      } catch (error) {
-        console.error("Error fetching orphan data: ", error);
-        setLoading(false);
-      }
-    };
+  //       setLoading(false);
+  //     } catch (error) {
+  //       console.error("Error fetching orphan data: ", error);
+  //       setLoading(false);
+  //     }
+  //   };
 
-    if (id) {
-      fetchOrphanById();
-    }
-  }, [id]);
+  //   if (id) {
+  //     fetchOrphanById();
+  //   }
+  // }, [id]);
 
-  if (loading) {
-    return (
-      <div className="text-center py-5" dir="rtl">
-        <div className="spinner-border text-secondary" role="status">
-          <span className="visually-hidden">جاري التحميل...</span>
-        </div>
-      </div>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <div className="text-center py-5" dir="rtl">
+  //       <div className="spinner-border text-secondary" role="status">
+  //         <span className="visually-hidden">جاري التحميل...</span>
+  //       </div>
+  //     </div>
+  //   );
+  // }
 
-  if (!orphanData) {
-    return <div className="text-center py-5 text-danger" dir="rtl">عذراً، لم يتم العثور على بيانات لهذا اليتيم.</div>;
-  }
+  // if (!orphanData) {
+  //   return <div className="text-center py-5 text-danger" dir="rtl">عذراً، لم يتم العثور على بيانات لهذا اليتيم.</div>;
+  // }
 
-  return (
-    <div>hi</div>
+  // return (
+  //   <div>hi</div>
     // <div className="container py-4" dir="rtl">
     //   {/* عنوان الصفحة */}
     //   <div className="row mb-4">
@@ -181,7 +181,7 @@ function AllData() {
 
     //   </div>
     // </div>
-  );
-}
+  // );
+// }
 
-export default AllData;
+// export default AllData;
