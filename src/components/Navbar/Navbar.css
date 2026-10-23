@@ -1,0 +1,62 @@
+.sidebar-col {
+  background-color: #fcf8f2 !important;
+}
+
+/* تنسيق الحاوية الداخلية للقائمة الجانبية */
+.sidebar-menu {
+  background-color: #fcf8f2 !important; /* لون سكري/كريمي دافئ وموحد */
+  min-height: calc(100vh - 70px); /* لتغطية طول الشاشة أسفل الهيدر */
+  border-left: 1px solid #e7d8c9;
+}
+
+/* دائرة الشعار */
+.brand-logo-circle {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 1px solid #e7d8c9;
+}
+
+.logo-text {
+  font-size: 8.5px;
+  text-align: center;
+  padding: 0 4px;
+}
+
+/* تأثير التحديد والتحويم للروابط */
+.sidebar-item {
+  transition: all 0.2s ease-in-out;
+  color: #334155 !important;
+}
+
+.sidebar-item:hover {
+  background-color: #f1ede4 !important;
+  color: #115e59 !important;
+}
+
+.sidebar-icon {
+  color: #115e59;
+}
+
+.sidebar-text {
+  font-size: 0.9rem;
+}
+.custom-app-header {
+  background-color: #115e59 !important; /* لون كحلي/زيتي داكن ومتناسق */
+  min-height: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* محاذاة العنوان في المنتصف بدقة */
+.header-center-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .header-center-title {
+    position: static;
+    transform: none;
+  }
+}

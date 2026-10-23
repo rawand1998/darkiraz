@@ -1,0 +1,8 @@
+.form-control{
+    width: 100%;
+    padding:10px 14px;
+    border: 1px solid #f00;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+}
