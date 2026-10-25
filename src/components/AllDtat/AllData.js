@@ -32,6 +32,8 @@ const Data = () => {
 
         if (docSnap.exists()) {
           setData({ id: docSnap.id, ...docSnap.data() });
+          setLoading(true);
+          setError("")
         }
        
       } catch (error) {
