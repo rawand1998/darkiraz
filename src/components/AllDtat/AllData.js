@@ -41,7 +41,7 @@ const Data = () => {
       }
     };
     fetchData();
-  }, [id]);
+  }, [id,loading,error]);
 // eslint-disable-next-line react-hooks/exhaustive-deps
   try {
   } catch (error) {
