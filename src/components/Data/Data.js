@@ -186,18 +186,21 @@ const handleOpenEdit = (item) => {
                 <td>{item.responsiborDetails.joinDate}</td>
 
                 <td>
-                  {/* <MdDelete /> */}
-                  <Link to={`/allData/${item.id}`}>
+                 
+                  {item.id?( <Link to={`/allData/${item.id}`}>
                   
                     <FaEye color="#4A9DFE" />
-                  </Link>{" "}
+                  </Link>):(
+                    <span className="text-danger">لا يوجد</span>
+                  )}
+                 
                 </td>
                 <td>
                   <CiEdit color="#718096" onClick={()=>handleOpenEdit(item)}/>
                 </td>
-                <td>
+                {/* <td>
                   <Link to="/allData"></Link>
-                </td>
+                </td> */}
 
                 {/* <button onClick={() => removeData(item.id)}></button>
               <button></button> */}

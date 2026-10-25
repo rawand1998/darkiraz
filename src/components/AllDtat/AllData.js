@@ -13,8 +13,15 @@ const Data = () => {
   const { id } = useParams();
   console.log(id,"all data page")
   const navigate = useNavigate();
+  const [loading,setLoading]=useState(true)
+  const[error,setError]=useState(null)
   console.log("ID from URL:", id, data); // تحقق من الـ id القادم من الرابط
   useEffect(() => {
+    if(!id){    
+      setLoading(false);
+      setError("غير موجود عنصر حاليا")
+      return;
+    }
     const fetchData = async () => {
       try {
         const docRef = doc(db, "orphones", id);
@@ -24,7 +31,6 @@ const Data = () => {
         if (docSnap.exists()) {
           setData({ id: docSnap.id, ...docSnap.data() });
         }
-
        
       } catch (error) {
         console.error("Error fetching data: ", error);
@@ -54,6 +60,7 @@ const Data = () => {
   return (
 
  <>
+
       {!data ? (
         <div>Loading...</div>
       ) : (
