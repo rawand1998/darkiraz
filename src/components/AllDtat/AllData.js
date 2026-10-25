@@ -42,7 +42,7 @@ const Data = () => {
     };
     fetchData();
   }, [id]);
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   try {
   } catch (error) {
     console.error("Error removing data: ", error);
