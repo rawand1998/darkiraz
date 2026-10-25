@@ -19,7 +19,9 @@ const Data = () => {
   useEffect(() => {
     if(!id){    
       setLoading(false);
+
       setError("غير موجود عنصر حاليا")
+      console.log(loading,error)
       return;
     }
     const fetchData = async () => {

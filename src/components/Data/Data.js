@@ -53,9 +53,7 @@ const handleOpenEdit = (item) => {
         }));
         setData(dataList);
         setOriginalData(dataList);
-        console.log(dataList.map((item)=>{
-          console.log(item.id,"data page")
-        }));
+     
       } catch (error) {
         console.error("Error fetching data: ", error);
       }
