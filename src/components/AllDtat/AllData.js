@@ -11,7 +11,7 @@ const Data = () => {
   const [error, setError] = useState(null);
   console.log("ID from URL:", id, data); // تحقق من الـ id القادم من الرابط
   useEffect(() => {
-    if (!id) {
+    if (!id|| id=== "undefined"||id==="null") {
       setLoading(false);
 
       setError("غير موجود عنصر حاليا");
@@ -19,7 +19,9 @@ const Data = () => {
       return;
     }
     const fetchData = async () => {
+      
       try {
+        setLoading(true);
         const docRef = doc(db, "orphones", id);
 
         const docSnap = await getDoc(docRef);
@@ -41,6 +43,10 @@ const Data = () => {
     console.error("Error removing data: ", error);
   }
   const handleDelete = async () => {
+    if(!id){
+      alert("لا يوجد")
+      return;
+    }
     const confirmDelete = window.confirm(
       "هل أنت متأكد أنك تريد حذف هذا اليتيم؟",
     );
@@ -159,13 +165,13 @@ const Data = () => {
                           السنة الدراسية
                         </td>
                         <td className=" text-start">
-                          {data?.orphone.studyLevel || "gh"}
+                          {data?.orphone?.studyLevel || "gh"}
                         </td>
                       </tr>
                       <tr>
                         <td className="text-muted text-end">تاريخ الانضمام</td>
                         <td className=" text-start">
-                          {data?.responsiborDetails.joinDate || "gh"}
+                          {data?.responsiborDetails?.joinDate || "gh"}
                         </td>
                       </tr>
                     </tbody>
@@ -342,7 +348,7 @@ const Data = () => {
                           <td>{data?.familyDetails?.homeState}</td>
                           <td>
                             <span className="badge bg-warning-subtle text-warning-emphasis px-3 py-2">
-                              {data.familyDetails.livingState}
+                              {data.familyDetails?.livingState}
                             </span>
                           </td>
                           <td className="fw-bold">
