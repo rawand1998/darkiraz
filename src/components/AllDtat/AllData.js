@@ -7,29 +7,23 @@ const Data = () => {
   const [data, setData] = useState(null);
   const { id } = useParams();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   console.log("ID from URL:", id, data); // تحقق من الـ id القادم من الرابط
   useEffect(() => {
     if (!id|| id=== "undefined"||id==="null") {
-      setLoading(false);
 
-      setError("غير موجود عنصر حاليا");
-      console.log(loading, error);
+      console.log("cndhbfc");
       return;
     }
     const fetchData = async () => {
       
       try {
-        setLoading(true);
         const docRef = doc(db, "orphones", id);
 
         const docSnap = await getDoc(docRef);
 
         if (docSnap.exists()) {
           setData({ id: docSnap.id, ...docSnap.data() });
-          setLoading(true);
-          setError("");
+        
         }
       } catch (error) {
         console.error("Error fetching data: ", error);
