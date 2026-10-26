@@ -185,7 +185,7 @@ const handleOpenEdit = (item) => {
 
                 <td>
                  
-                  {item.id?( <Link to={`/allData/${item.id}`}>
+                  {item.id?( <Link to={`/allData/${item?.id}`}>
                   
                     <FaEye color="#4A9DFE" />
                   </Link>):(
