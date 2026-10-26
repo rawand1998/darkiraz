@@ -449,7 +449,7 @@ console.log("erroer converting image",error)
                   نموذج بيانات اليتيم - إضافة بيانات العائلة
                 </h5>
               </div>
-              <Form onSubmit={handleData} className=" d-flex align-items-center">
+              <div className=" d-flex align-items-center">
                 <Row className="g-4">
                   <Col lg={6}>
                     <Row className="g-3 align-items-start">
@@ -864,7 +864,7 @@ console.log("erroer converting image",error)
                     {/* </Card> */}
                   </Col>
                 </Row>
-              </Form>
+              </div>
             </Card>
           </Col>
         </Row>
@@ -879,7 +879,7 @@ console.log("erroer converting image",error)
                   نموذج بيانات اليتيم - إضافة بيانات الوصي
                 </h5>
               </div>
-              <Form onSubmit={handleData} className="align-items-center">
+              <div  className="align-items-center">
                 <Row className="g-4">
                   <Col lg={6}>
                     <Row className="g-3 align-items-start">
@@ -1113,7 +1113,7 @@ console.log("erroer converting image",error)
                     {/* </Card> */}
                   </Col>
                 </Row>
-              </Form>
+              </div>
             </Card>
           </Col>
         </Row>
