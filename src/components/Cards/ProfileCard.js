@@ -57,7 +57,7 @@ export default function ProfileCard() {
   //     }
   //   };
   const { currentUser} = useAuth();
-  console.log("currentUser", currentUser.id);
+ 
  useEffect(() => {
     const fetchUserName = async () => {
       // التأكد من أن الـ id للمستخدم الحالي موجود
@@ -83,7 +83,7 @@ export default function ProfileCard() {
     };
 
     fetchUserName();
-  }, [currentUser]);
+  }, [currentUser?.id]);
 
 
   const handleClose = () => {
@@ -142,7 +142,11 @@ export default function ProfileCard() {
     }
   };
   return (
-    <div className="d-flex justify-content-start p-3" dir="ltr">
+    <>
+    {!currentUser?(
+<div>loading</div>
+    ):(
+       <div className="d-flex justify-content-start p-3" dir="ltr">
       <Dropdown dir="ltr">
         {/* زر القائمة المنسدلة (أيقونة المستخدم في الشريط العلوي) */}
         <Dropdown.Toggle
@@ -309,5 +313,11 @@ export default function ProfileCard() {
         </Modal.Body>
       </Modal>
     </div>
+    )}
+      
+
+     
+    </>
+  
   );
 }
