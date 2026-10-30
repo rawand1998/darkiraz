@@ -319,3 +319,169 @@
 //   );
 // };
 // export default Data;
+
+
+
+
+ <div className="row g-4 mb-4">
+            <div className="col-md-6">
+              <div
+                className="card  border-0 h-100"
+                style={{ boxShadow: "0px 1px 10px 1px #2A9D8F" }}
+              >
+                <div
+                  className="card-header  d-flex justify-content-between align-items-center py-3"
+                  style={{ backgroundColor: "#115E59" }}
+                >
+                  <h5 className="mb-0 fw-bold text-dark text-white">
+                    معلومات اليتيم
+                  </h5>
+                </div>
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4 border-bottom pb-3">
+                    <img
+                      src={
+                        data?.orphone?.image || "https://via.placeholder.com/80"
+                      }
+                      alt="صورة اليتيم"
+                      className="rounded-circle border"
+                      style={{
+                        width: "70px",
+                        height: "70px",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <div className="ms-3 me-3 ">
+                      <h6 className="mb-1 text-muted" dir="rtl">
+                        اليتيم
+                      </h6>
+                      <h5 className="fw-bold mb-0">
+                        {data?.orphone?.orphonename || "لا يوجد"}
+                      </h5>
+                    </div>
+                  </div>
+
+                  <table className="table table-borderless align-middle mb-0">
+                    <tbody>
+                      <tr>
+                        <td className="text-muted text-end">الهوية</td>
+                        <td className=" text-start">
+                          {data?.orphone?.orphanId || "لا يوجد"}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end fw-semibold">
+                          تاريخ الميلاد
+                        </td>
+                        <td className=" text-start">
+                          {data?.orphone?.brithday || "لا يوجد"}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end fw-semibold">
+                          مكان الميلاد
+                        </td>
+                        <td className=" text-start">
+                          {data?.orphone?.brithdayPlace || "لا يوجد"}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end fw-semibold">
+                          الحالة
+                        </td>
+                        <td className="text-start">
+                          <span
+                            className="badge"
+                            style={{ backgroundColor: "#115E59" }}
+                          >
+                            {data?.orphone?.careState || "لا يوجد"}
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end fw-semibold">
+                          {" "}
+                          السنة الدراسية
+                        </td>
+                        <td className=" text-start">
+                          {data?.orphone?.studyLevel || "gh"}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end">تاريخ الانضمام</td>
+                        <td className=" text-start">
+                          {data?.responsiborDetails?.joinDate || "gh"}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* ))} */}
+            </div>
+
+            <div className="col-md-6">
+              <div
+                className="card  border-0 h-100"
+                style={{ boxShadow: "0px 1px 10px 1px #b92733" }}
+              >
+                <div
+                  className="card-header  d-flex justify-content-between align-items-center py-3"
+                  style={{ backgroundColor: "#b92733" }}
+                >
+                  <h5 className="mb-0 fw-bold text-dark text-white">
+                    معلومات الوكيل
+                  </h5>
+                </div>
+                <div className="card-body">
+                  <div className="d-flex align-items-center mb-4 border-bottom pb-3">
+                    <div className="ms-3 me-3 ">
+                      <h6 className="mb-1 text-muted" dir="rtl">
+                        الوكيل
+                      </h6>
+                      <h5 className="fw-bold mb-0">
+                        {data?.responsiborDetails?.responsibor}
+                      </h5>
+                    </div>
+                  </div>
+                  <table className="table table-borderless align-middle mb-0">
+                    <tbody>
+                      <tr>
+                        <td className="text-muted text-end">هوية الوكيل</td>
+                        <td className="text-start">
+                          {data?.responsiborDetails?.responsiborId}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end">صلة القرابة</td>
+                        <td className=" text-start">
+                          {data?.responsiborDetails?.relative}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end">مهنة الوكيل</td>
+                        <td className=" text-start">
+                          {data?.responsiborDetails?.responsiborJob}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end">رقم الجوال</td>
+                        <td className=" text-start">
+                          {data?.responsiborDetails?.phone}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="text-muted text-end">
+                          رقم الجوال البديل
+                        </td>
+                        <td className=" text-start">
+                          {data?.responsiborDetails?.alternativePhone}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+          </div>
